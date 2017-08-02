@@ -192,5 +192,7 @@ public class Main {
 
         MyVehicle newCar = new MyVehicle("Chevy","Four","South",45,0);
         newCar.setDirection("North");
+
+        MyCar newCar1 = new MyCar();
     }
 }
