@@ -190,9 +190,14 @@ public class Main {
 
     public static void myVehicle(){
 
-        MyVehicle newCar = new MyVehicle("Chevy","Four","South",45,0);
-        newCar.setDirection("North");
+        //MyVehicle newCar = new MyVehicle("Chevy","Four","South",45,0);
+        //newCar.setDirection("North");
 
-        MyCar newCar1 = new MyCar();
+        //MyCar newCar1 = new MyCar();
+        StingRay newStingray = new StingRay("","Chevy","Four","North",40,0,"Stingray","Two","6.3 L V8");
+        StingRay test = new StingRay("","","","",0,0,"","","");
+        CarInfo stingRayInfo = new CarInfo();
+        System.out.println(test.getClass());
     }
+
 }
