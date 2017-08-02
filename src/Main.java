@@ -13,7 +13,7 @@ public class Main {
         //calculateInterest(1000,25);
         //bankStuff();
         //animal();
-        vehicle();
+        myVehicle();
 
 //        int value = 1;
 //        if (value ==1){
@@ -188,4 +188,9 @@ public class Main {
         //System.out.println(newDuck.getCurSpeed());
     }
 
+    public static void myVehicle(){
+
+        MyVehicle newCar = new MyVehicle("Chevy","Four","South",45,0);
+        newCar.setDirection("North");
+    }
 }
