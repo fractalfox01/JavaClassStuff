@@ -13,7 +13,8 @@ public class Main {
         //calculateInterest(1000,25);
         //bankStuff();
         //animal();
-        myVehicle();
+        //myVehicle();
+        myComputer();
 
 //        int value = 1;
 //        if (value ==1){
@@ -188,16 +189,25 @@ public class Main {
         //System.out.println(newDuck.getCurSpeed());
     }
 
-    public static void myVehicle(){
+    public static void myVehicle() {
 
-        //MyVehicle newCar = new MyVehicle("Chevy","Four","South",45,0);
-        //newCar.setDirection("North");
-
-        //MyCar newCar1 = new MyCar();
-        StingRay newStingray = new StingRay("","Chevy","Four","North",40,0,"Stingray","Two","6.3 L V8");
-        StingRay test = new StingRay("","","","",0,0,"","","");
-        CarInfo stingRayInfo = new CarInfo();
-        System.out.println(test.getClass());
+        StingRay mysting = new StingRay();
+        System.out.println(mysting.getGetInfo());
+        System.out.println(mysting.getName());
+//        mysting.changeSpeed(25);
+//        mysting.changeGear(1);
+//        mysting.changeDirection("South");
     }
 
+    public static void myComputer(){
+        Dimensions dimensions = new Dimensions(20, 20, 5);
+        Case thecase = new Case("2288", "Dell","240", dimensions);
+
+        Monitor theMoniter = new Monitor("27inch Beast","Acer", 27,new Resolution(2540, 1440));
+
+        Motherboard theMotherboard = new Motherboard("BJ-200", "Asus", 4, 6, "v2.44");
+
+        Pc thePc = new Pc(thecase, theMoniter, theMotherboard);
+        thePc.powerUp();
+    }
 }

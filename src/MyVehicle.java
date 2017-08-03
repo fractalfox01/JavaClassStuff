@@ -1,7 +1,7 @@
 
 import java.util.ArrayList;
 
-public class MyVehicle {
+public class MyVehicle{
 
     private String name;
     private String wheels;
@@ -9,7 +9,12 @@ public class MyVehicle {
     private int speed;
     private int gear;
 
+    CarInfo getInfo = new CarInfo();
 
+    public CarInfo getGetInfo() {
+        final CarInfo info = this.getInfo;
+        return info;
+    }
 
     public
     MyVehicle() {
@@ -35,6 +40,7 @@ public class MyVehicle {
         System.out.println(("Direction is " + this.getDirection()));
         System.out.println("Current Speed is " + this.getSpeed() + "mph");
     }
+
     public String getName() {
         return name;
     }

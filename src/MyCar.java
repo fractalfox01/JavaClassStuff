@@ -16,6 +16,19 @@ public class MyCar extends MyVehicle {
         this.engine = engine;
     }
 
+    public void changeGear(int gear){
+        this.setGear(gear);
+        System.out.println("Changed Gear To " + this.getGear());
+    }
+
+    public void changeSpeed(int speed){
+        this.setSpeed(speed);
+    }
+
+    public void changeDirection(String direction){
+        this.setDirection(direction);
+    }
+
     public String getModel() {
         return model;
     }
