@@ -1,0 +1,54 @@
+public class feetToCentimeters {
+    public static void main(String[] args) {
+
+        // class called from helloworld.java.
+        // use feetToCentimeters.startConvertion(); to run.
+    }
+
+    public static void startConvertion(){
+        System.out.println(calcFeetAndInchesToCentimeters(5,0));
+        System.out.println(calcFeetAndInchesToCentimeters(-2));
+    }
+
+    public static double calcFeetAndInchesToCentimeters(double feet, double inches){
+        // first param feet is >= 0
+        // second inches is >= 0
+        // return -1 if either above not true
+        // 1 foot = 30.48cm
+        // i inch = 2.54cm
+
+
+        //////////////////////////////////////////////////////////////////////////
+        // left side of "?" is the validation checking of feet and inches.      //
+        // To the right of the "?".                                             //
+        //      left side of ":" gets returned if all validation returns true.  //
+        //      else "-1" gets returned.                                        //
+        //                                                                      //
+        //VALIDATION ONLY:                                                      //
+        //      (feet >= 0 && ((inches <= 12 && inches >= 0)))                  //
+        //                                                                      //
+        //RETURNED IF TRUE:                                                     //
+        //      ((feet * 12) + inches)                                          //
+        //////////////////////////////////////////////////////////////////////////
+
+        return ((feet >= 0 && ((inches <= 12 && inches >= 0))) ? (((feet * 12) + inches) * 2.54) : -1);
+
+    }
+
+    public static double calcFeetAndInchesToCentimeters(int inches){
+        // >=0
+        //return -1 if not true
+        // if true calculate how many feet are in the inches then
+        // pass to other method
+        int feet = ((inches/12));
+        int feetToInch = ((feet * 12));
+        int newInch = inches - feetToInch;
+
+        if (inches >- 0){
+            return (calcFeetAndInchesToCentimeters(feet, newInch));
+        }
+        else {
+            return -1;
+        }
+    }
+}
